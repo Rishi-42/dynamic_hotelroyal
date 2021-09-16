@@ -1,3 +1,6 @@
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link -->
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="{% static 'royal_hotel/css/style.css' %}">
 
 </head>
 <body>
@@ -48,7 +51,7 @@
     </div>
 
     <div class="image">
-        <img src="../IMAGES/hotel-royal-retro.png" alt="Hotel Image">
+        <img src="{% static 'royal_hotel/img/hotel-royal-retro.png'%}" alt="Hotel Image">
     </div>
 </section>
 
