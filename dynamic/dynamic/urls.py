@@ -19,5 +19,5 @@ import royal_hotel.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('royal_hotel', royal_hotel.views.index, name="index"),
+    path('hotel', royal_hotel.views.index, name="index"),
 ]
