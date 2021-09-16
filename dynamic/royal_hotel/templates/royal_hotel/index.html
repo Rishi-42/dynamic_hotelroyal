@@ -65,66 +65,17 @@
         our<span> Speciality</span>
     </h1>
     <div class="box-container">
+    {% for speciality in specialitys %}
     <div class="box">
-        <img class="image" src="../IMAGES/reception.jpg" alt="">
+        <img class="image" src="{{ speciality.s_image.url }}" alt="">
         <div class="content">
-            <img src="../IMAGES/reception_icon.png" alt="">
-            <h3>Reception</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+            <img src="{{ speciality.s_image_icon.url }}" alt="">
+            <h3>{{ speciality.s_title }}</h3>
+            <p>{{ speciality.s_content }}</p>
         </div>
     </div>
-    <div class="box">
-        <img class="image" src="../IMAGES/swimming_pool.jpg" alt="">
-        <div class="content">
-            <img src="../IMAGES/reception_icon.png" alt="">
-            <h3>Swimming</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        </div>
-    </div>
-    <div class="box">
-        <img class="image" src="../IMAGES/bedroom.jpg" alt="">
-        <div class="content">
-            <img src="../IMAGES/reception_icon.png" alt="">
-            <h3>Bedroom</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        </div>
-    </div>
-    <div class="box">
-        <img class="image" src="../IMAGES/mess.jpg" alt="">
-        <div class="content">
-            <img src="../IMAGES/reception_icon.png" alt="">
-            <h3>Dinning Hall</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        </div>
-    </div>
-    <div class="box">
-        <img class="image" src="../IMAGES/couch.jpg" alt="">
-        <div class="content">
-            <img src="../IMAGES/reception_icon.png" alt="">
-            <h3>Couch</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        </div>
-    </div>
-    <div class="box">
-        <img class="image" src="../IMAGES/Netflix.jpg" alt="">
-        <div class="content">
-            <img src="../IMAGES/reception_icon.png" alt="">
-            <h3>Television</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        </div>
-    </div>
+    {% endfor %}
+ 
     </div>
 </section>
 <!-- Speciality section end -->
@@ -135,52 +86,12 @@
         most <span> Popular Fast</span> meals
     </h1>
     <div class="box-container">
-        <div class="box">
-            <span class="price"> $5 - $20 </span>
-            <img src="../IMAGES/p-1.jpg" alt="">
-            <h3>tasty burger</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <a href="#" class="btn">order now</a>
-        </div>
 
+    {% for meal in meals %}
         <div class="box">
-            <span class="price"> $7 - $10 </span>
-            <img src="../IMAGES/p-2.jpg" alt="">
-            <h3>pan cake</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <a href="#" class="btn">order now</a>
-        </div>
-
-        <div class="box">
-            <span class="price"> $3 - $10 </span>
-            <img src="../IMAGES/p-3.jpg" alt="">
-            <h3>Furan dana</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <a href="#" class="btn">order now</a>
-        </div>
-
-        <div class="box">
-            <span class="price"> $20 - $200 </span>
-            <img src="../IMAGES/p-4.jpg" alt="">
-            <h3>cake</h3>
+            <span class="price">{{ meal.m_price }}</span>
+            <img src="{{ meal.m_image.url }}" alt="">
+            <h3>{{ meal.m_title }}</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -190,34 +101,7 @@
             </div>
             <a href="#" class="btn">order now</a>
         </div>
-
-        <div class="box">
-            <span class="price"> $5 - $100 </span>
-            <img src="../IMAGES/p-5.jpg" alt="">
-            <h3>cold drinks</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <a href="#" class="btn">order now</a>
-        </div>
-
-        <div class="box">
-            <span class="price"> $1 - $15 </span>
-            <img src="../IMAGES/p-6.jpg" alt="">
-            <h3>pop sickles</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <a href="#" class="btn">order now</a>
-        </div>
+        {% endfor %}
     </div>
 </section>
 <!-- popular section end -->
@@ -253,59 +137,18 @@
     <h1 class="heading">our <span>gallery</span></h1>
 
     <div class="box-container">
+        {% for gallery in gallerys %}
         <div class="box">
-            <img src="../IMAGES/p-1.jpg" alt="">
+            <img src="{{ gallery.g_image.url }}" alt="">
             <div class="content">
-                <h3>tasty food</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur voluptatibus ea recusandae reiciendis, fuga saepe consequatur voluptate voluptatem, ducimus illum magnam voluptas. Totam ex, deserunt nostrum nesciunt corporis aliquid?</p>
+                <h3>{{ gallery.g_title }}</h3>
+                <p>{{ gallery.g_content }}</p>
                 <a href="#" class="btn"> order now</a>
             </div>
         </div>
+        {% endfor %}
 
-        <div class="box">
-            <img src="../IMAGES/p-1.jpg" alt="">
-            <div class="content">
-                <h3>tasty food</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur voluptatibus ea recusandae reiciendis, fuga saepe consequatur voluptate voluptatem, ducimus illum magnam voluptas. Totam ex, deserunt nostrum nesciunt corporis aliquid?</p>
-                <a href="#" class="btn"> order now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="../IMAGES/p-1.jpg" alt="">
-            <div class="content">
-                <h3>tasty food</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur voluptatibus ea recusandae reiciendis, fuga saepe consequatur voluptate voluptatem, ducimus illum magnam voluptas. Totam ex, deserunt nostrum nesciunt corporis aliquid?</p>
-                <a href="#" class="btn"> order now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="../IMAGES/p-1.jpg" alt="">
-            <div class="content">
-                <h3>tasty food</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur voluptatibus ea recusandae reiciendis, fuga saepe consequatur voluptate voluptatem, ducimus illum magnam voluptas. Totam ex, deserunt nostrum nesciunt corporis aliquid?</p>
-                <a href="#" class="btn"> order now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="../IMAGES/p-1.jpg" alt="">
-            <div class="content">
-                <h3>tasty food</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur voluptatibus ea recusandae reiciendis, fuga saepe consequatur voluptate voluptatem, ducimus illum magnam voluptas. Totam ex, deserunt nostrum nesciunt corporis aliquid?</p>
-                <a href="#" class="btn"> order now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="../IMAGES/p-1.jpg" alt="">
-            <div class="content">
-                <h3>tasty food</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur voluptatibus ea recusandae reiciendis, fuga saepe consequatur voluptate voluptatem, ducimus illum magnam voluptas. Totam ex, deserunt nostrum nesciunt corporis aliquid?</p>
-                <a href="#" class="btn"> order now</a>
-            </div>
-        </div>
+        
     </div>
 </section>
 <!-- galley section end -->
@@ -315,9 +158,10 @@
 <section class="feedbacks" id="feedbacks">
     <h1 class="heading">our happy <span>clients</span></h1>
     <div class="box-container">
+        {% for feedback in feedbacks %}
         <div class="box">
-            <img src="../IMAGES/rector.jpg" alt="">
-            <h3>rishi raj shrestha</h3>
+            <img src='{{ feedback.f_image.url }}'>
+            <h3>{{ feedback.f_name }}</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -325,36 +169,9 @@
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae modi quia expedita maxime ducimus minus fugit! Sequi molestiae tempore sunt.</p> 
+            <p>{{ feedback.f_content }}</p> 
         </div>
-
-        <div class="box">
-            <img src="../IMAGES/rector.jpg" alt="">
-            <h3>mandip tamu</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae modi quia expedita maxime ducimus minus fugit! Sequi molestiae tempore sunt.</p>
-            
-        </div>
-
-        <div class="box">
-            <img src="../IMAGES/rector.jpg" alt="">
-            <h3>anish kc</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae modi quia expedita maxime ducimus minus fugit! Sequi molestiae tempore sunt.</p>
-            
-        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -443,6 +260,6 @@
 
 
     <!-- custom js file link  -->
-    <script src="../JS/script.js"></script>
+    <script src="{% static 'royal_hotel/js/script.js' %}"></script>
 </body>
 </html>
