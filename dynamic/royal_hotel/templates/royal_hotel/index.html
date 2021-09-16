@@ -89,7 +89,7 @@
 
     {% for meal in meals %}
         <div class="box">
-            <span class="price">{{ meal.m_price }}</span>
+            <span class="price">$ {{ meal.m_price }}</span>
             <img src="{{ meal.m_image.url }}" alt="">
             <h3>{{ meal.m_title }}</h3>
             <div class="stars">
