@@ -18,5 +18,5 @@ class Gallery(models.Model):
 
 class Feedback(models.Model):
     f_image = models.ImageField(upload_to='img/')
-    f_name = models.TextField(max_length=10)
+    f_name = models.CharField(max_length=20)
     f_content = models.TextField(max_length=550)
